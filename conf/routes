@@ -4,13 +4,35 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+#GET     /                           controllers.HomeController.index
 GET     /second                     controllers.HomeController.second
 GET     /sample                     controllers.SampleController.index
 GET     /sample/page                controllers.SampleController.page
 GET     /sample/:id                        controllers.HomeController.get(id: Long)
 
 #GET     /json/json-sample           controllers.SampleController.jsonSample
+
+GET     /                           controllers.BoardController.index
+
+GET     /post                       controllers.PostController.index
+GET     /post/create                controllers.PostController.create
+GET     /post/edit                  controllers.PostController.edit
+GET     /post/update                controllers.PostController.update
+GET     /post/delete                controllers.PostController.delete
+
+GET     /user                       controllers.UserController.list
+GET     /user/follow                controllers.UserController.follow
+GET     /user/unfollow              controllers.UserController.unFollow
+
+GET     /sign                       controllers.SignController.top
+GET     /sign/up                    controllers.SignController.signUp
+GET     /sign/out                   controllers.SignController.signOut
+
+GET     /mypage                     controllers.MyPageController.index
+GET     /mypage/edit                controllers.MyPageController.edit
+GET     /mypage/update              controllers.MyPageController.update
+
+
 
 
 
